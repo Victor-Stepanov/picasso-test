@@ -1,6 +1,7 @@
-import React from "react";
+import { Virtuoso } from "react-virtuoso";
 import { useGetPostsQuery } from "../../model/fetchPostsApi";
-import { PostList } from "../post-list";
+import React from "react";
+import { PostItem } from "@/entities/post-item/post-item";
 
 export const PostListContainer = () => {
   const [page, setPage] = React.useState(1);
@@ -11,8 +12,22 @@ export const PostListContainer = () => {
   }
 
   if (!posts) {
-    return;
+    return null;
   }
 
-  return <PostList posts={posts} />;
+  return (
+    <Virtuoso
+      style={{ height: "500px" }}
+      totalCount={posts.length}
+      itemContent={(index: number) => {
+        const post = posts[index];
+        return (
+          <div>
+            <PostItem post={post} />
+          </div>
+        );
+      }}
+      endReached={() => setPage((prevPage) => prevPage + 1)}
+    />
+  );
 };
