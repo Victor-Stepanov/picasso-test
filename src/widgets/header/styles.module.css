@@ -1,0 +1,6 @@
+.root {
+  height: 30px;
+  border-radius: 5px;
+  background-color: var(--colors-interface-main);
+  margin-bottom: 50px;
+}
