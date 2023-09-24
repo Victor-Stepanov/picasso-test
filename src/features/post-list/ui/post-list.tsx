@@ -5,19 +5,21 @@ import { Virtuoso } from "react-virtuoso";
 
 interface Props {
   posts: IPost[];
+  onPageChange: () => void;
 }
 
-export const PostList: React.FC<Props> = ({ posts }) => {
-  const itemContent = (index: number) => {
-    const post = posts[index];
-    return <PostItem post={post} />;
-  };
-
+export const PostList: React.FC<Props> = ({ posts, onPageChange }) => {
   return (
     <Virtuoso
-      style={{ height: "400px" }}
+      style={{
+        height: "calc(100vh - 150px)",
+        width: "100%",
+      }}
       totalCount={posts.length}
-      itemContent={itemContent}
+      itemContent={(index: number) => {
+        return <PostItem key={posts[index].id} post={posts[index]} />;
+      }}
+      endReached={onPageChange}
     />
   );
 };
