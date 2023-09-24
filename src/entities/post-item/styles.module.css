@@ -1,5 +1,15 @@
 .root {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  justify-content: space-between;
+  width: 96%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: var(--colors-interface-orange);
+  transition: all 0.2s ease-in-out;
+}
+
+.root:hover {
+  transform: scale(1.03);
 }

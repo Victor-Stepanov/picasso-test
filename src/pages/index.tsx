@@ -9,7 +9,7 @@ const routes: RouteObject[] = [
     element: <Layout />,
     children: [
       { index: true, element: <HomePage /> },
-      { path: ":postId", element: <PostPage /> },
+      { path: "/post/:postId", element: <PostPage /> },
     ],
   },
 ];

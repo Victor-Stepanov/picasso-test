@@ -1,6 +1,6 @@
-import { PostBody } from "@/entities/post-body";
 import { useParams } from "react-router-dom";
 import { useGetPostByIdQuery } from "../../model/fetchPostByIdApi";
+import { PostItem } from "@/entities/post-item/post-item";
 
 export const PostDetailsContainer = () => {
   const { postId } = useParams();
@@ -12,5 +12,5 @@ export const PostDetailsContainer = () => {
     return;
   }
 
-  return <PostBody body={data?.body} title={data?.title} />;
+  return <PostItem post={data} />;
 };

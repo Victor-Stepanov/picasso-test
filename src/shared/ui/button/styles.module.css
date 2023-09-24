@@ -1,0 +1,15 @@
+.root {
+  display: inline-block;
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button_variant_primary {
+  background-color: inherit;
+}
+.button_variant_primary:hover {
+  border: 1px solid white;
+}
