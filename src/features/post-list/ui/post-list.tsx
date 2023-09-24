@@ -12,7 +12,7 @@ export const PostList: React.FC<Props> = ({ posts, onPageChange }) => {
   return (
     <Virtuoso
       style={{
-        height: "calc(100vh - 150px)",
+        height: "500px",
         width: "100%",
       }}
       totalCount={posts.length}
