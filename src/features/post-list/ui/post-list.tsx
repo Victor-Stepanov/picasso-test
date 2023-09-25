@@ -2,8 +2,7 @@ import React from 'react'
 
 import { Virtuoso } from 'react-virtuoso'
 
-import { PostItem } from '../../../entities/post-item/post-item'
-
+import { PostItem } from '@/entities/post-item/post-item'
 import { IPost } from '@/shared/types'
 
 interface Props {

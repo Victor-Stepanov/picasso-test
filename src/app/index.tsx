@@ -5,7 +5,7 @@ import { RouterProvider } from 'react-router-dom'
 import { store } from './store'
 
 import { router } from '../pages'
-import '../app/assets/styles/index.css'
+import './assets/styles/index.css'
 
 function App() {
   return (
