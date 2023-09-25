@@ -1,5 +1,5 @@
-import { api } from "@/shared/api";
-import { IPost } from "@/shared/types";
+import { api } from '@/shared/api'
+import { IPost } from '@/shared/types'
 
 const fetchPostsApi = api.injectEndpoints({
   endpoints: (builder) => ({
@@ -9,19 +9,19 @@ const fetchPostsApi = api.injectEndpoints({
       }),
       // Only have one cache entry because the arg always maps to one string
       serializeQueryArgs: ({ endpointName }) => {
-        return endpointName;
+        return endpointName
       },
       // Always merge incoming data to the cache entry
       merge: (currentCache, newItems) => {
-        currentCache.push(...newItems);
+        currentCache.push(...newItems)
       },
       // Refetch when the page arg changes
       forceRefetch({ currentArg, previousArg }) {
-        return currentArg !== previousArg;
+        return currentArg !== previousArg
       },
     }),
   }),
   overrideExisting: false,
-});
+})
 
-export const { useGetPostsQuery } = fetchPostsApi;
+export const { useGetPostsQuery } = fetchPostsApi

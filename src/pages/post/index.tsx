@@ -1,5 +1,6 @@
-import { PostDetailsContainer } from "@/features/post-details/ui/container";
-import styles from "./styles.module.css";
+import styles from './styles.module.css'
+
+import { PostDetailsContainer } from '@/features/post-details/ui/container'
 
 export const PostPage = () => {
   return (
@@ -7,5 +8,5 @@ export const PostPage = () => {
       <h2 className={styles.title}> Информация о посте</h2>
       <PostDetailsContainer />
     </section>
-  );
-};
+  )
+}

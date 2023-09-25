@@ -1,5 +1,5 @@
-import { api } from "@/shared/api";
-import { IPost } from "@/shared/types";
+import { api } from '@/shared/api'
+import { IPost } from '@/shared/types'
 
 const fetchPostByIdApi = api.injectEndpoints({
   endpoints: (builder) => ({
@@ -9,6 +9,6 @@ const fetchPostByIdApi = api.injectEndpoints({
       }),
     }),
   }),
-});
+})
 
-export const { useGetPostByIdQuery } = fetchPostByIdApi;
+export const { useGetPostByIdQuery } = fetchPostByIdApi

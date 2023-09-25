@@ -1,5 +1,6 @@
-import { PostListContainer } from "@/features/post-list/ui/container";
-import styles from "./styles.module.css";
+import styles from './styles.module.css'
+
+import { PostListContainer } from '@/features/post-list/ui/container'
 
 export const HomePage = () => {
   return (
@@ -7,5 +8,5 @@ export const HomePage = () => {
       <h1 className={styles.title}>Список постов:</h1>
       <PostListContainer />
     </section>
-  );
-};
+  )
+}

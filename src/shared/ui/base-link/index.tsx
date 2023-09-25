@@ -1,12 +1,14 @@
-import React from "react";
-import styles from "./styles.module.css";
-import { Link } from "react-router-dom";
-import cn from "classnames";
+import cn from 'classnames'
+import React from 'react'
+
+import { Link } from 'react-router-dom'
+
+import styles from './styles.module.css'
 
 interface Props {
-  children: React.ReactNode;
-  to: string;
-  className?: string;
+  children: React.ReactNode
+  to: string
+  className?: string
 }
 
 export const BaseLink: React.FC<Props> = ({ children, to, className }) => {
@@ -14,5 +16,5 @@ export const BaseLink: React.FC<Props> = ({ children, to, className }) => {
     <Link className={cn(styles.root, className)} to={to}>
       {children}
     </Link>
-  );
-};
+  )
+}
