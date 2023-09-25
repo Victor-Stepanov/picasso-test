@@ -1,0 +1,31 @@
+.root {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.postNumber {
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.postInfo {
+  flex: 1;
+  overflow: hidden;
+}
+
+.postTitle {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.postDescriptionShort {
+  max-width: 600px;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.postDescription {
+  font-size: 14px;
+}

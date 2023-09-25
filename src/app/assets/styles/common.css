@@ -1,0 +1,36 @@
+:root {
+  --colors-interface-white: #ffffff;
+  --colors-interface-black: #000000;
+  --colors-interface-main: #ffdf8c;
+  --colors-interface-orange: rgb(238, 159, 12);
+}
+
+html,
+body {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--colors-interface-main);
+  font-family: 'Robot', sans-serif;
+}
+
+#root {
+  max-width: 1440px;
+  padding: 20px;
+  margin: 50px auto;
+  position: relative;
+  background-color: var(--colors-interface-white);
+  border-radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
