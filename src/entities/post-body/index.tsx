@@ -11,7 +11,7 @@ interface Props extends Omit<IPost, 'userId'> {
 export const PostBody: React.FC<Props> = ({ title, body, id, isShortInfo }) => {
   return (
     <div className={styles.root}>
-      <span className={styles.postNumber}>{`№:${id}`}</span>
+      <span className={styles.postNumber}>{`№ ${id}`}</span>
       <div className={styles.postInfo}>
         <h3 className={styles.postTitle}>{title}</h3>
         <p className={isShortInfo ? styles.postDescriptionShort : styles.postDescription}>{body}</p>

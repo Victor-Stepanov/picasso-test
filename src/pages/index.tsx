@@ -1,4 +1,4 @@
-import { RouteObject, createBrowserRouter } from 'react-router-dom'
+import { Navigate, RouteObject, createBrowserRouter } from 'react-router-dom'
 
 import { HomePage } from './home'
 import { Layout } from './layout'
@@ -13,6 +13,7 @@ const routes: RouteObject[] = [
       { path: '/post/:postId', element: <PostPage /> },
     ],
   },
+  { path: '*', element: <Navigate to='/' /> },
 ]
 
 export const router = createBrowserRouter(routes)
