@@ -1,13 +1,14 @@
 import { useGetPostsQuery } from "../../model/fetchPostsApi";
 import React from "react";
 import { PostList } from "../post-list";
+import { Loader } from "@/shared/ui/loader";
 
 export const PostListContainer = () => {
   const [page, setPage] = React.useState(1);
   const { data: posts, isLoading } = useGetPostsQuery(page);
 
   if (isLoading) {
-    return <span>Loading...</span>;
+    return <Loader />;
   }
 
   if (!posts) {

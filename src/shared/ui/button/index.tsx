@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./styles.module.css";
 import cn from "classnames";
 
-type ViewVariant = "primary" | "secondary";
+type ViewVariant = "primary";
 
 interface Props
   extends React.DetailedHTMLProps<
